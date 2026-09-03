@@ -1,190 +1,21 @@
-:root {
-  --cmf-azul: #011e41;
-  --cmf-azul-2: #062b5f;
-  --cmf-dorado: #f2b705;
-  --texto: #172033;
-  --muted: #64748b;
-  --borde: #e5e7eb;
-  --fondo: #f5f7fb;
-  --card: #ffffff;
-  --sombra: 0 10px 30px rgba(1, 30, 65, 0.10);
-  --sombra-hover: 0 18px 45px rgba(1, 30, 65, 0.18);
-}
+/* ============================================================
+   allied-merchants.css
+   Estilos extra para la página de Comercios Aliados (diseño nuevo).
+   Aquí va el logo que se muestra dentro de cada tarjeta de marca.
+   ============================================================ */
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: var(--fondo);
-  color: var(--texto);
-}
-
-.seccion-comercios {
-  padding: 48px 20px 60px;
-}
-
-.encabezado-comercios {
-  max-width: 1200px;
-  margin: 0 auto 30px;
-  text-align: center;
-}
-
-.encabezado-comercios h2 {
-  margin: 0;
-  color: var(--cmf-azul);
-  font-size: clamp(28px, 4vw, 44px);
-  font-weight: 800;
-  letter-spacing: -0.04em;
-}
-
-.encabezado-comercios p {
-  max-width: 720px;
-  margin: 12px auto 0;
-  color: var(--muted);
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-.lista-comercios {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 28px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0;
-}
-
-.comercio-card {
-  position: relative;
-  min-height: 330px;
-  padding: 28px 24px 58px;
-  text-align: center;
-  background: var(--card);
-  border: 1px solid var(--borde);
-  border-radius: 18px;
-  box-shadow: var(--sombra);
-  overflow: hidden;
-  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
-}
-
-.comercio-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 5px;
-  background: linear-gradient(90deg, var(--cmf-azul), var(--cmf-azul-2), var(--cmf-dorado));
-}
-
-.comercio-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--sombra-hover);
-  border-color: rgba(1, 30, 65, 0.18);
-}
-
-.logo-comercio {
-  height: 150px;
+/* Espacio del logo dentro de cada tarjeta (.brand-card) */
+.brand-card-logo {
+  height: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 18px;
-}
-
-.logo-comercio a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-
-.logo-comercio img {
-  max-height: 170px;
-  max-width: 185px;
-  object-fit: contain;
-  cursor: pointer;
-  transition: transform 0.22s ease;
-}
-
-.comercio-card:hover .logo-comercio img {
-  transform: scale(1.04);
-}
-
-.comerciodetails h3 {
-  margin: 0 0 10px;
-  color: var(--cmf-azul);
-  font-size: 20px;
-  font-weight: 800;
-  line-height: 1.25;
-}
-
-.tipotienda {
   margin-bottom: 10px;
-  color: #475569;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 1.4;
 }
 
-.ubicacion {
-  margin-bottom: 10px;
-  color: #7b8794;
-  font-size: 13px;
-  line-height: 1.35;
-}
-
-.redes {
-  position: absolute;
-  left: 18px;
-  bottom: 18px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.redes a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  padding: 5px;
-  border-radius: 999px;
-  background: #f1f5f9;
-  transition: transform 0.2s ease, background 0.2s ease;
-}
-
-.redes a:hover {
-  transform: translateY(-2px);
-  background: #e2e8f0;
-}
-
-.redes img {
-  width: 100%;
-  height: 100%;
+/* La imagen del logo: se ajusta sin deformarse */
+.brand-card-logo img {
+  max-height: 100%;
+  max-width: 90%;
   object-fit: contain;
-  cursor: pointer;
-}
-
-@media (max-width: 640px) {
-  .seccion-comercios {
-    padding: 32px 14px 46px;
-  }
-
-  .lista-comercios {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .comercio-card {
-    min-height: 310px;
-    padding: 24px 18px 56px;
-  }
-
-  .logo-comercio img {
-    max-width: 165px;
-  }
 }
