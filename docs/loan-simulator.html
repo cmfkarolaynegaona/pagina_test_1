@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Simulador de crédito — CMF</title>
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/styles.css?v=26" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- El menú se inyecta aquí desde include.js -->
+<div id="site-header"></div>
+
+<div id="app">
+<div class="view" id="view-simulador">
+<section class="calc-section">
+<div class="calc-inner">
+<div class="calc-header">
+<div class="section-label">Simulador cuotas de tu Tarjeta de Crédito</div>
+<h2>¿Cuánto puedes pagar?</h2>
+</div>
+<div class="calc-card">
+<label class="calc-label">¿Cuánto necesitas?</label>
+<div class="calc-display">
+<span class="calc-display-prefix">B/.</span>
+<input class="calc-display-input" id="simAmtInput" max="5000" min="100" onblur="clampSimInput(this)" oninput="syncSimInput(this)" step="50" type="number" value="500"/>
+</div>
+<input class="calc-range" id="simRange" max="5000" min="100" oninput="syncSimSlider(this)" step="50" type="range" value="500"/>
+<div class="calc-range-labels"><span>B/. 100</span><span>B/. 5,000</span></div>
+<label class="calc-label">Plazo de pago</label>
+<div class="calc-pills-wrap">
+<button class="calc-pill active" data-months="6" onclick="selectSimPlazo(this)">6 meses</button>
+<button class="calc-pill" data-months="12" onclick="selectSimPlazo(this)">12 meses</button>
+<button class="calc-pill" data-months="18" onclick="selectSimPlazo(this)">18 meses</button>
+<button class="calc-pill" data-months="24" onclick="selectSimPlazo(this)">24 meses</button>
+<button class="calc-pill" data-months="30" onclick="selectSimPlazo(this)">30 meses</button>
+<button class="calc-pill" data-months="36" onclick="selectSimPlazo(this)">36 meses</button>
+</div>
+<div class="calc-result-box">
+<div class="calc-result-label">Tu cuota mensual estimada</div>
+<div class="calc-result-num">B/. <span id="simResult">90</span></div>
+<div class="calc-result-note">*Tasa referencial 15% anual. Sujeto a aprobación crediticia individual.</div>
+</div>
+<button class="app-cta-primary">
+          Solicitar ahora →
+        </button>
+</div>
+</div>
+</section>
+</div>
+</div>
+
+<!-- El pie de página se inyecta aquí desde include.js -->
+<div id="site-footer"></div>
+
+<script src="assets/js/include.js?v=1"></script>
+<script src="assets/js/script.js?v=5"></script>
+</body>
+</html>

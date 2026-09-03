@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Comercios aliados — CMF</title>
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/styles.css?v=26" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- El menú se inyecta aquí desde include.js -->
+<div id="site-header"></div>
+
+<div id="app">
+<div class="view" id="view-comercios-aliados">
+<div class="view-hero">
+<div class="view-hero-inner">
+<div class="section-label">Comercios aliados</div>
+<h1>Más de 200 marcas <em>en toda Panamá</em></h1>
+<p>Estas son algunas de las marcas que ya forman parte de la red CMF.</p>
+</div>
+</div>
+<div class="view-content">
+<div class="view-content-inner">
+<!-- Mapa de provincias -->
+<div class="prov-map-wrap reveal">
+<div class="prov-map-eyebrow">Selecciona una provincia</div>
+<svg class="prov-map-svg" id="prov-map" viewbox="0 0 720 290" xmlns="http://www.w3.org/2000/svg">
+<!-- Bocas del Toro — sin datos -->
+<g class="prov-g prov-nodata">
+<polygon class="prov-shape" points="5,18 80,5 95,72 52,88 18,70"></polygon>
+<text class="prov-lbl" x="50" y="50">Bocas del Toro</text>
+</g>
+<!-- Ngäbe-Buglé — sin datos -->
+<g class="prov-g prov-nodata">
+<polygon class="prov-shape" points="95,72 165,50 182,100 168,155 128,158 112,78"></polygon>
+<text class="prov-lbl" x="138" y="112">Ngäbe-Buglé</text>
+</g>
+<!-- Los Santos — sin datos -->
+<g class="prov-g prov-nodata">
+<polygon class="prov-shape" points="298,240 325,220 338,168 368,188 378,260 335,278 295,262"></polygon>
+<text class="prov-lbl" x="334" y="248">Los Santos</text>
+</g>
+<!-- Darién — sin datos -->
+<g class="prov-g prov-nodata">
+<polygon class="prov-shape" points="628,42 718,25 720,185 685,252 615,268 555,230 608,182 632,115"></polygon>
+<text class="prov-lbl" x="662" y="155">Darién</text>
+</g>
+<!-- Chiriquí -->
+<g class="prov-g" data-name="Chiriquí" data-prov="chiriqui" id="pm-chiriqui" onclick="selectProvMap(this)">
+<polygon class="prov-shape" points="8,68 52,88 95,72 112,78 128,195 80,250 12,235 5,175"></polygon>
+<text class="prov-lbl" x="62" y="172">Chiriquí</text>
+</g>
+<!-- Veraguas -->
+<g class="prov-g" data-name="Veraguas" data-prov="veraguas" id="pm-veraguas" onclick="selectProvMap(this)">
+<polygon class="prov-shape" points="112,78 128,158 168,155 182,100 250,88 268,135 262,228 215,252 168,248 130,210"></polygon>
+<text class="prov-lbl" x="188" y="182">Veraguas</text>
+</g>
+<!-- Coclé -->
+<g class="prov-g" data-name="Coclé" data-prov="cocle" id="pm-cocle" onclick="selectProvMap(this)">
+<polygon class="prov-shape" points="250,88 182,100 165,50 275,30 325,65 320,112 292,128 268,135"></polygon>
+<text class="prov-lbl" x="255" y="92">Coclé</text>
+</g>
+<!-- Herrera -->
+<g class="prov-g" data-name="Herrera" data-prov="herrera" id="pm-herrera" onclick="selectProvMap(this)">
+<polygon class="prov-shape" points="262,228 268,135 292,128 320,112 338,168 325,220 298,240"></polygon>
+<text class="prov-lbl" x="296" y="182">Herrera</text>
+</g>
+<!-- Colón -->
+<g class="prov-g" data-name="Colón" data-prov="colon" id="pm-colon" onclick="selectProvMap(this)">
+<polygon class="prov-shape" points="165,50 275,30 325,65 380,45 438,52 450,95 418,108 395,102 320,112 325,65 275,30"></polygon>
+<text class="prov-lbl" x="308" y="72">Colón</text>
+</g>
+<!-- Panamá Oeste -->
+<g class="prov-g" data-name="Panamá Oeste" data-prov="panama-oeste" id="pm-panama-oeste" onclick="selectProvMap(this)">
+<polygon class="prov-shape" points="320,112 395,102 418,108 432,160 408,208 375,220 348,215 338,168"></polygon>
+<text class="prov-lbl" x="372" y="162">Pty. Oeste</text>
+</g>
+<!-- Panamá -->
+<g class="prov-g" data-name="Panamá" data-prov="panama" id="pm-panama" onclick="selectProvMap(this)">
+<polygon class="prov-shape" points="438,52 565,20 628,42 632,115 608,182 555,230 492,250 432,252 408,208 432,160 418,108 450,95"></polygon>
+<text class="prov-lbl" x="518" y="148">Panamá</text>
+</g>
+</svg>
+<!-- Chip de provincia activa -->
+<div class="prov-map-chip" id="prov-map-chip" onclick="clearProvMap()" style="display:none">
+<span id="prov-map-chip-label">Panamá</span>
+<span class="prov-map-chip-x">×</span>
+</div>
+<!-- select oculto para compatibilidad con filterBrands() -->
+<select id="filter-prov" onchange="filterBrands()" style="display:none">
+<option value="">Todas las provincias</option>
+<option value="panama">Panamá</option>
+<option value="panama-oeste">Panamá Oeste</option>
+<option value="chiriqui">Chiriquí</option>
+<option value="colon">Colón</option>
+<option value="herrera">Herrera</option>
+<option value="veraguas">Veraguas</option>
+<option value="cocle">Coclé</option>
+</select>
+</div>
+<!-- Filtro de categoría -->
+<div class="brand-filters reveal">
+<div class="brand-filter-row">
+<div class="brand-filter-item" style="max-width:260px">
+<label class="brand-filter-label">Categoría</label>
+<select class="brand-filter-select" id="filter-cat" onchange="filterBrands()">
+<option value="">Todas las categorías</option>
+<option value="supermercados">Supermercados</option>
+<option value="farmacias">Farmacias</option>
+<option value="ferreteria">Ferretería y hogar</option>
+<option value="construccion">Construcción</option>
+<option value="tecnologia">Tecnología</option>
+<option value="entretenimiento">Entretenimiento</option>
+<option value="restaurantes">Restaurantes</option>
+<option value="moda">Moda y ropa</option>
+<option value="salud">Salud y bienestar</option>
+</select>
+</div>
+</div>
+<p class="brand-filter-count" id="brand-count">Mostrando 15 comercios</p>
+</div>
+<!-- Grilla de marcas -->
+<div class="brands-grid" id="brands-grid" style="margin-bottom:16px">
+<div class="brand-card" data-cat="ferreteria" data-prov="panama,chiriqui,colon"><div class="brand-card-name">NOVEY</div><div class="brand-card-tag">Ferretería y hogar</div></div>
+<div class="brand-card" data-cat="construccion" data-prov="panama,chiriqui,panama-oeste"><div class="brand-card-name">COCHEZ</div><div class="brand-card-tag">Construcción</div></div>
+<div class="brand-card" data-cat="ferreteria" data-prov="panama"><div class="brand-card-name">KOHLER</div><div class="brand-card-tag">Diseño de hogar</div></div>
+<div class="brand-card" data-cat="supermercados" data-prov="panama,chiriqui,colon,panama-oeste"><div class="brand-card-name">EL REY</div><div class="brand-card-tag">Supermercados</div></div>
+<div class="brand-card" data-cat="supermercados" data-prov="panama"><div class="brand-card-name">RIBA SMITH</div><div class="brand-card-tag">Supermercado premium</div></div>
+<div class="brand-card" data-cat="farmacias" data-prov="panama,chiriqui,colon,panama-oeste,herrera"><div class="brand-card-name">ARROCHA</div><div class="brand-card-tag">Farmacias</div></div>
+<div class="brand-card" data-cat="entretenimiento" data-prov="panama,colon,panama-oeste"><div class="brand-card-name">CINEMARK</div><div class="brand-card-tag">Entretenimiento</div></div>
+<div class="brand-card" data-cat="tecnologia" data-prov="panama,chiriqui"><div class="brand-card-name">TECNOBYTE</div><div class="brand-card-tag">Tecnología</div></div>
+<div class="brand-card" data-cat="supermercados" data-prov="panama,chiriqui,panama-oeste,colon"><div class="brand-card-name">SUPER 99</div><div class="brand-card-tag">Supermercados</div></div>
+<div class="brand-card" data-cat="farmacias" data-prov="panama,panama-oeste"><div class="brand-card-name">FARMA METRO</div><div class="brand-card-tag">Farmacias</div></div>
+<div class="brand-card" data-cat="supermercados" data-prov="chiriqui,herrera,veraguas,cocle"><div class="brand-card-name">BUEN PRECIO</div><div class="brand-card-tag">Supermercados</div></div>
+<div class="brand-card" data-cat="supermercados" data-prov="panama-oeste,herrera,veraguas"><div class="brand-card-name">ROMERO</div><div class="brand-card-tag">Supermercados</div></div>
+<div class="brand-card" data-cat="ferreteria" data-prov="panama,chiriqui,panama-oeste"><div class="brand-card-name">DO IT CENTER</div><div class="brand-card-tag">Ferretería y hogar</div></div>
+<div class="brand-card" data-cat="farmacias" data-prov="panama,chiriqui,herrera,veraguas,cocle"><div class="brand-card-name">UNIVERSAL</div><div class="brand-card-tag">Farmacias</div></div>
+<div class="brand-card" data-cat="entretenimiento" data-prov="panama"><div class="brand-card-name">MULTIPLAZA</div><div class="brand-card-tag">Entretenimiento</div></div>
+<div class="brand-card more" id="brand-card-more"><div class="brand-card-name">+185</div><div class="brand-card-tag">socios más en toda Panamá</div></div>
+</div>
+<!-- Sin resultados -->
+<div id="brands-no-results" style="display:none;text-align:center;padding:40px 0 24px">
+<svg fill="none" height="40" stroke="rgba(1,30,65,0.2)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" style="margin-bottom:12px" viewbox="0 0 24 24" width="40"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+<p style="font-size:15px;font-weight:700;color:rgba(1,30,65,0.5);margin-bottom:4px">Sin resultados</p>
+<p style="font-size:13px;color:rgba(1,30,65,0.35)">Prueba con otra provincia o categoría</p>
+</div>
+<div style="text-align:center;padding-bottom:48px;margin-top:16px">
+<p class="sub" style="margin-bottom:20px">¿Quieres que tu negocio aparezca aquí?</p>
+<button class="btn-lime" onclick="document.getElementById('modal-comercio').classList.add('open')">Aplicar como aliado →</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- El pie de página se inyecta aquí desde include.js -->
+<div id="site-footer"></div>
+
+<script src="assets/js/include.js?v=1"></script>
+<script src="assets/js/script.js?v=5"></script>
+</body>
+</html>
