@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<title>Comercios aliados — CMF</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="assets/css/styles.css?v=26" rel="stylesheet"/><link href="assets/css/allied-merchants.css?v=2" rel="stylesheet"/>
+</head>
+<body>
+<!-- El menú se inyecta aquí desde include.js -->
+<div id="site-header"></div>
+<div id="app">
+<div class="view" id="view-comercios-aliados">
+<div class="view-hero">
+<div class="view-hero-inner">
+<div class="section-label">Comercios aliados</div>
+<h1>Más de 200 marcas <em>en toda Panamá</em></h1>
+<p>Estas son algunas de las marcas que ya forman parte de la red CMF.</p>
+</div>
+</div>
+<div class="view-content">
+<div class="view-content-inner">
+<!-- Mapa de provincias -->
+
+<!-- Filtro de categoría -->
+
+<!-- Grilla de marcas -->
+<div class="brands-grid" id="brands-grid" style="margin-bottom:16px"><div class="brand-card">
+<div class="brand-card-logo"><img alt="Cochez" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/logocochez.png"/></div>
+<div class="brand-card-name">Cochez</div>
+<div class="brand-card-tag">Materiales de construcción</div>
+<div class="brand-card-prov">—</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/cochezpanama/?hl=es" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+<a href="https://www.cochezycia.com" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+</div>
+</div>
+<div class="brand-card">
+<div class="brand-card-logo"><img alt="Novey" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/novey-logo.png"/></div>
+<div class="brand-card-name">Novey</div>
+<div class="brand-card-tag">Mejoras del Hogar</div>
+<div class="brand-card-prov">—</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/noveypanama/?hl=es" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+<a href="https://www.novey.com.pa" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+</div>
+</div>
+<div class="brand-card">
+<div class="brand-card-logo"><img alt="Punto Cochez" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/puntocochez.png"/></div>
+<div class="brand-card-name">Punto Cochez</div>
+<div class="brand-card-tag">Herramientas y pinturas</div>
+<div class="brand-card-prov">Panamá</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/puntocochez/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+<a href="https://puntocochez.com" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+</div>
+</div>
+<div class="brand-card">
+<div class="brand-card-logo"><img alt="Kohler" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/logokholer.png"/></div>
+<div class="brand-card-name">Kohler</div>
+<div class="brand-card-tag">Acabados</div>
+<div class="brand-card-prov">—</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/kohlerbycochez/?hl=es" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+<a href="https://kohlerbycochez.com/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+</div>
+</div>
+<div class="brand-card">
+<div class="brand-card-logo"><img alt="MerkApp" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/LogoMerkapp.png"/></div>
+<div class="brand-card-name">MerkApp</div>
+<div class="brand-card-tag">Supermercado en Línea</div>
+<div class="brand-card-prov">—</div>
+<div class="brand-card-redes">
+<a href="https://www.merkapp.com" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+<a href="https://www.instagram.com/merkapp_pa/?hl=es" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card more" id="btn-mas-comercios" onclick="verTodosComercios()">
+<div class="brand-card-name">+84</div>
+<div class="brand-card-tag">socios más en toda Panamá</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Agropecuaria Estrella de Oro" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/Agropecuaria_Estrella_oro.png"/></div>
+<div class="brand-card-name">Agropecuaria Estrella de Oro</div>
+<div class="brand-card-tag">Agropecuaria</div>
+<div class="brand-card-prov">Chiriquí</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="BIOMAGNETIC SA" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/Biomagnetic.png"/></div>
+<div class="brand-card-name">BIOMAGNETIC SA</div>
+<div class="brand-card-tag">Medicina funcional preventiva</div>
+<div class="brand-card-prov">Panamá</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/biomagneticpty/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+<a href="https://www.biomagnetic.com" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="BROTHERHOOD INK" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/BROTHERHOODINK.png"/></div>
+<div class="brand-card-name">BROTHERHOOD INK</div>
+<div class="brand-card-tag">Estudio de Tatuajes</div>
+<div class="brand-card-prov">Panamá</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Casa 3H" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/LogoCasa3h.jpg"/></div>
+<div class="brand-card-name">Casa 3H</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Panamá Oeste</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/casa3hsa/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+<a href="https://casamat3h.com/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Casa Angel" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/CASAANGEL.jpg"/></div>
+<div class="brand-card-name">Casa Angel</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Panamá Oeste</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/ferreteriacasaangel" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Casa Chorrerana" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/LOGOCASACHORRERANA.jpeg"/></div>
+<div class="brand-card-name">Casa Chorrerana</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Panamá Oeste</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/casa_chorrerana/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Casa de Materiales Facelh" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/CasadeMaterialesFaceLH.jpg"/></div>
+<div class="brand-card-name">Casa de Materiales Facelh</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Panamá</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Casa de Materiales Hector" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/Materialeshector.png"/></div>
+<div class="brand-card-name">Casa de Materiales Hector</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Veraguas</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/materialeshector/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+<a href="https://materialeshector.interfuerza.shop/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Casa Guo" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/CasaGuo.jpeg"/></div>
+<div class="brand-card-name">Casa Guo</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Panamá Oeste</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/casaguo/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="CELL PLUS" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/CELLPLUS.png"/></div>
+<div class="brand-card-name">CELL PLUS</div>
+<div class="brand-card-tag">Celulares, laptops, televisores, accesorios y servicio técnico</div>
+<div class="brand-card-prov">Panamá Oeste</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/cellplus_panama/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Centro de Cortes Carosi" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/CAROSI.png"/></div>
+<div class="brand-card-name">Centro de Cortes Carosi</div>
+<div class="brand-card-tag">Ebanistería</div>
+<div class="brand-card-prov">Panamá Oeste</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/cortescarosi/?hl=es" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+<a href="https://cortecarosi.com/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Centro Ferretero" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/LogoCentro_Ferretero.jpg"/></div>
+<div class="brand-card-name">Centro Ferretero</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Panamá Oeste</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/centroferreteropty/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+<a href="https://www.facebook.com/centro.ferretero.arraijan/?locale=es_LA" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Centro Materiales - Chorrera" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/centromateriales.jpg"/></div>
+<div class="brand-card-name">Centro Materiales - Chorrera</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Panamá Oeste</div>
+<div class="brand-card-redes">
+<a href="https://www.facebook.com/centrodematerialeschorrera/?locale=es_LA" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Clínica Óptica Rivera" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/OPTICARIVERA.jpg"/></div>
+<div class="brand-card-name">Clínica Óptica Rivera</div>
+<div class="brand-card-tag">Clínica óptica</div>
+<div class="brand-card-prov">Panamá</div>
+<div class="brand-card-redes">
+<a href="https://www.clinicasopticarivera.com/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+<a href="https://www.instagram.com/clinicaopticarivera/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Concretex" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/LogoConcretex.png"/></div>
+<div class="brand-card-name">Concretex</div>
+<div class="brand-card-tag">Concreto Premezclado</div>
+<div class="brand-card-prov">Panamá</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/concretexpanama" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+<a href="https://concretexpanama.com" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Dfc carshop &amp; audio" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/Dfc.jpg"/></div>
+<div class="brand-card-name">Dfc carshop &amp; audio</div>
+<div class="brand-card-tag">Autorepuestos</div>
+<div class="brand-card-prov">Panamá</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/dfccarshopandaudio/?hl=es" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Digital Phones" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/digitalend.png"/></div>
+<div class="brand-card-name">Digital Phones</div>
+<div class="brand-card-tag">Equipos a crédito</div>
+<div class="brand-card-prov">Panamá</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/digitalphonesp/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Economateriales S.A." loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/Economateriales.jpeg"/></div>
+<div class="brand-card-name">Economateriales S.A.</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Panamá Oeste</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/economateriales/?hl=es" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Escuela de Manejo Arilis" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/ESCUELADEMANEJOARILIS.png"/></div>
+<div class="brand-card-name">Escuela de Manejo Arilis</div>
+<div class="brand-card-tag">Escuela de manejo</div>
+<div class="brand-card-prov">Panamá</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/escuelaarilispanama/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Ferrehomes" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/FERREHOMES.png"/></div>
+<div class="brand-card-name">Ferrehomes</div>
+<div class="brand-card-tag">Materiales de construcción</div>
+<div class="brand-card-prov">Panamá Oeste</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/ferre_homes.w3st/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Ferremateriales" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/ferremateriales.jpg"/></div>
+<div class="brand-card-name">Ferremateriales</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Panamá Oeste</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/ferremateriales.s.a/?hl=es" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+<a href="https://www.facebook.com/Ferremateriales.s.a/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Ferremix" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/LogoFerreMix.jpg"/></div>
+<div class="brand-card-name">Ferremix</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Chiriquí</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/ferremix_dolega/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Ferreteria Mega Obra" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/MEGAOBRA.png"/></div>
+<div class="brand-card-name">Ferreteria Mega Obra</div>
+<div class="brand-card-tag">Materiales de construcción</div>
+<div class="brand-card-prov">Coclé</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/ferreteriamegaobra/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Ferreteria y Autorepuesto Owen" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/owen.png"/></div>
+<div class="brand-card-name">Ferreteria y Autorepuesto Owen</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Coclé</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/autorepuestosowen/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Ferretería ABK" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/abk.png"/></div>
+<div class="brand-card-name">Ferretería ABK</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">—</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/aceroyagroabk2/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Ferretería La Economía" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/FerreteriaLaEconomia.jpg"/></div>
+<div class="brand-card-name">Ferretería La Economía</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Herrera</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Ferretería Lucas" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/FerreteriaLucas.jpeg"/></div>
+<div class="brand-card-name">Ferretería Lucas</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Los Santos</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/ferreterialucas18/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Ferretería Miki" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/miki.png"/></div>
+<div class="brand-card-name">Ferretería Miki</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Chiriquí</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/ferreteria_miki/?hl=es" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Ferretería Rocky" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/FerreteriaRocky.jpeg"/></div>
+<div class="brand-card-name">Ferretería Rocky</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Panamá Oeste</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/ferreteriarocky/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Ferretería Tommy" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/logotommy.jpeg"/></div>
+<div class="brand-card-name">Ferretería Tommy</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Coclé</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Ferretería y Autorepuesto Economic" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/ECONOMIC.jpeg"/></div>
+<div class="brand-card-name">Ferretería y Autorepuesto Economic</div>
+<div class="brand-card-tag">Ferretería y tienda de auto repuesto</div>
+<div class="brand-card-prov">Colón</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/ferreteriaeconomic/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Ferretería y Materiales Macomi" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/Macomi.jpg"/></div>
+<div class="brand-card-name">Ferretería y Materiales Macomi</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Veraguas</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Ferretería y Materiales Nuevo Vigía" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/nuevovigia.jpg"/></div>
+<div class="brand-card-name">Ferretería y Materiales Nuevo Vigía</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">—</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Ferricentro Las Lomas" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/LASLOMAS.png"/></div>
+<div class="brand-card-name">Ferricentro Las Lomas</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Coclé</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Fervenca" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/Fervenca.jpeg"/></div>
+<div class="brand-card-name">Fervenca</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Chiriquí</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/fervencachiriqui/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="FOTO SONIDO" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/FOTOSONIDO.png"/></div>
+<div class="brand-card-name">FOTO SONIDO</div>
+<div class="brand-card-tag">Tienda departamental</div>
+<div class="brand-card-prov">Panamá Oeste</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Grupo Casa &amp; Casa" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/CasayCasa.jpg"/></div>
+<div class="brand-card-name">Grupo Casa &amp; Casa</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Panamá Oeste</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/casaycasapty/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+<a href="https://casaycasa.com.pa/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Grupo Rapid" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/LogoRapid.png"/></div>
+<div class="brand-card-name">Grupo Rapid</div>
+<div class="brand-card-tag">Aires Acondicionados, Piscinas y Fumigación</div>
+<div class="brand-card-prov">—</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/gruporapid/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+<a href="https://www.gruporapid.com/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Grupo Zou" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/GrupoZou.jpeg"/></div>
+<div class="brand-card-name">Grupo Zou</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Coclé</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Herramientas y Tornillos" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/LogoHT.avif"/></div>
+<div class="brand-card-name">Herramientas y Tornillos</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Panamá</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/htautomotrizeindustrial/?hl=es" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+<a href="https://ht.com.pa/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Ingco Store - David" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/LOGO_Ingco.jpg"/></div>
+<div class="brand-card-name">Ingco Store - David</div>
+<div class="brand-card-tag">Herramientas para el hogar</div>
+<div class="brand-card-prov">Chiriquí</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/ingcostoredavid/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+<a href="https://ingco.com.pa/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Istmo Llantas" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/IstmoLlantas.png"/></div>
+<div class="brand-card-name">Istmo Llantas</div>
+<div class="brand-card-tag">Llantas y servicios automotrices</div>
+<div class="brand-card-prov">Panamá</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Kilómetro 7" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/KM7.png"/></div>
+<div class="brand-card-name">Kilómetro 7</div>
+<div class="brand-card-tag">Tienda</div>
+<div class="brand-card-prov">Panamá Oeste</div>
+<div class="brand-card-redes">
+<a href="https://www.kilometro7panama.com/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Las Margaritas" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/LasMargaritas.jpeg"/></div>
+<div class="brand-card-name">Las Margaritas</div>
+<div class="brand-card-tag">Ferreteria y Auto Repuesto</div>
+<div class="brand-card-prov">Panamá</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Loltec" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/LOLTEC.jpeg"/></div>
+<div class="brand-card-name">Loltec</div>
+<div class="brand-card-tag">Componentes de PC</div>
+<div class="brand-card-prov">Panamá</div>
+<div class="brand-card-redes">
+<a href="https://www.loltec.com/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+<a href="https://www.instagram.com/loltec/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Materiales Buena Vista" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/MaterialesBuenaVista.jpg"/></div>
+<div class="brand-card-name">Materiales Buena Vista</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Panamá Oeste</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/materialesbuenavista1/?hl=es" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Materiales de Construcción Marciaga" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/MaterialesMarciaga.jpeg"/></div>
+<div class="brand-card-name">Materiales de Construcción Marciaga</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Los Santos</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Materiales Dorado Plus" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/MaterialesDoradoPlus.jpeg"/></div>
+<div class="brand-card-name">Materiales Dorado Plus</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Chiriquí</div>
+<div class="brand-card-redes">
+<a href="https://www.facebook.com/p/Ferreteria-Dorado-Plus-Caldera-100069616183267/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="MATERIALES FELIX" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/MATERIALESFELIX.jpeg"/></div>
+<div class="brand-card-name">MATERIALES FELIX</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Panamá Oeste</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/materiales_felix_capira" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Materials &amp; Tools Depot, Corp." loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/materials&amp;tools.jpg"/></div>
+<div class="brand-card-name">Materials &amp; Tools Depot, Corp.</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Chiriquí</div>
+<div class="brand-card-redes">
+<a href="https://instagram.com/materials_tools_depot/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Mayolm" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/MAYOLM.jpeg"/></div>
+<div class="brand-card-name">Mayolm</div>
+<div class="brand-card-tag">Health Center</div>
+<div class="brand-card-prov">Panamá</div>
+<div class="brand-card-redes">
+<a href="https://www.mayolmcenter.com" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Mayron &amp; Builders Group" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/Mayron.jpg"/></div>
+<div class="brand-card-name">Mayron &amp; Builders Group</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Chiriquí</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Mercadito Estrella de Oro" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/mercado_estrella_oro.jpg"/></div>
+<div class="brand-card-name">Mercadito Estrella de Oro</div>
+<div class="brand-card-tag">Supermercado</div>
+<div class="brand-card-prov">Chiriquí</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Miguel Lam" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/MIGUEL_LAM.png"/></div>
+<div class="brand-card-name">Miguel Lam</div>
+<div class="brand-card-tag">Ferreteria y Auto Repuesto</div>
+<div class="brand-card-prov">Panamá</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/ferreteriamiguellam/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+<a href="https://www.facebook.com/miguellamsa/?locale=es_LA" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Mph" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/MPH.jpg"/></div>
+<div class="brand-card-name">Mph</div>
+<div class="brand-card-tag">MotoPartes</div>
+<div class="brand-card-prov">Panamá</div>
+<div class="brand-card-redes">
+<a href="https://mphmotopartes.com/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+<a href="https://www.instagram.com/mph_motopartes/?hl=es" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Móvil Farmacia" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/MOVILFARMACIA.jpeg"/></div>
+<div class="brand-card-name">Móvil Farmacia</div>
+<div class="brand-card-tag">Venta de telefonía y farmacia</div>
+<div class="brand-card-prov">Chiriquí</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/movilfarmacia" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Nelly Center" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/nellycenter.png"/></div>
+<div class="brand-card-name">Nelly Center</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Los Santos</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/nellycenter_lastablas/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="NTECH" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/Ntech.png"/></div>
+<div class="brand-card-name">NTECH</div>
+<div class="brand-card-tag">Tienda gamer y tecnología</div>
+<div class="brand-card-prov">Panamá</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/ntech507" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Oca Loca" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/logoocaloca.png"/></div>
+<div class="brand-card-name">Oca Loca</div>
+<div class="brand-card-tag">Tienda departamental</div>
+<div class="brand-card-prov">—</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/almacenocaloca/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+<a href="https://linktr.ee/almacenocaloca" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="PEMCO" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/PEMCO.png"/></div>
+<div class="brand-card-name">PEMCO</div>
+<div class="brand-card-tag">Herramientas y equipos para construcción e industria</div>
+<div class="brand-card-prov">Panamá</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/pemcopty/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+<a href="https://www.pemco.com.pa/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Plaza Material" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/plazamaterial.png"/></div>
+<div class="brand-card-name">Plaza Material</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Panamá Oeste</div>
+<div class="brand-card-redes">
+<a href="https://instagram.com/plazamaterial/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Radiadores Tomy" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/RadiadoresTomy.png"/></div>
+<div class="brand-card-name">Radiadores Tomy</div>
+<div class="brand-card-tag">Aire Acondicionado Automotriz</div>
+<div class="brand-card-prov">Panamá Oeste</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/rtomy_sa/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+<a href="https://radiadorestomy.com/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Rapid Pools" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/RAPIDPOOLS.png"/></div>
+<div class="brand-card-name">Rapid Pools</div>
+<div class="brand-card-tag">Servicios de piscinas, saunas, bañeras y mantenimiento especializado</div>
+<div class="brand-card-prov">—</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/rapidpoolspty/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+<a href="https://www.rapid-pools.com/es_Pa" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="REVOLUTION 507 N.3" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/REVOLUCION507.png"/></div>
+<div class="brand-card-name">REVOLUTION 507 N.3</div>
+<div class="brand-card-tag">Auto repuesto y taller de mecánica</div>
+<div class="brand-card-prov">Panamá</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/revolution507.3/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Royal Depot" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/ROYALDEPOT.jpeg"/></div>
+<div class="brand-card-name">Royal Depot</div>
+<div class="brand-card-tag">Artículos para el hogar</div>
+<div class="brand-card-prov">Panamá Oeste</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/royaldepot_pa/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Selecto Panamá" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/SELECTO.png"/></div>
+<div class="brand-card-name">Selecto Panamá</div>
+<div class="brand-card-tag">Mejoras para el hogar</div>
+<div class="brand-card-prov">Panamá</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/selectopanama/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+<a href="https://selectopa.com/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="SKIN AND ART" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/Logotattooestudio.png"/></div>
+<div class="brand-card-name">SKIN AND ART</div>
+<div class="brand-card-tag">Estudio de Tatuajes</div>
+<div class="brand-card-prov">Panamá</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/skinarttattoost/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Smart Hardware" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/LogoSmartHardware.jpg"/></div>
+<div class="brand-card-name">Smart Hardware</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Veraguas</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/smart_hardware/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Super Ahorro" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/SuperAhorro.JPEG"/></div>
+<div class="brand-card-name">Super Ahorro</div>
+<div class="brand-card-tag">Tienda departamental</div>
+<div class="brand-card-prov">Panamá</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/superahorrovc/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Super Casa" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/SuperCasa.jpg"/></div>
+<div class="brand-card-name">Super Casa</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Panamá Oeste</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/ferreteriasupercasa/?hl=es-la" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+<a href="https://www.facebook.com/ferreteriasupercasa/?locale=es_LA" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Super Descuento" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/ferreteriasuperdescuento.png"/></div>
+<div class="brand-card-name">Super Descuento</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Colón</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/fsuperdescuento_oficial/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+<a href="https://www.facebook.com/ferreteriasuperdescuento/?locale=es_LA" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Super Fuerte" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/Superfuerte.png"/></div>
+<div class="brand-card-name">Super Fuerte</div>
+<div class="brand-card-tag">Tienda departamental</div>
+<div class="brand-card-prov">Coclé</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/almacensuperfuerte/?hl=es" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Supreme Wheels" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/Supremewheels.jpeg"/></div>
+<div class="brand-card-name">Supreme Wheels</div>
+<div class="brand-card-tag">Rines y llantas</div>
+<div class="brand-card-prov">Panamá</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/supremewheels23/?hl=es" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Technocredit" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/technocredit.jpg"/></div>
+<div class="brand-card-name">Technocredit</div>
+<div class="brand-card-tag">Tecnología</div>
+<div class="brand-card-prov">Panamá</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/technocredit_" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Tecnobyte Store" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/Tecnobyte.png"/></div>
+<div class="brand-card-name">Tecnobyte Store</div>
+<div class="brand-card-tag">Tecnología</div>
+<div class="brand-card-prov">Panamá</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/tecnobytestore" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+<a href="https://www.tecnobytestores.com" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Tecnofijaciones Varal" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/LogoVaral.jpg"/></div>
+<div class="brand-card-name">Tecnofijaciones Varal</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Chiriquí</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/ferreteria_varal/?hl=es-la" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+<a href="https://www.facebook.com/p/Tecnofijaciones-Varal-100072655627394/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="TECNOPRO" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/technopro.png"/></div>
+<div class="brand-card-name">TECNOPRO</div>
+<div class="brand-card-tag">Celulares, consolas, accesorios y tecnología</div>
+<div class="brand-card-prov">Panamá</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/tecnopro.albrook/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="The Tools Depot" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/TOOLSDEPOT.png"/></div>
+<div class="brand-card-name">The Tools Depot</div>
+<div class="brand-card-tag">Materiales de construcción</div>
+<div class="brand-card-prov">Chiriquí</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/ferreteriathetoolsdepot/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Tool Master" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/toolmaster.png"/></div>
+<div class="brand-card-name">Tool Master</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">Panamá</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/tool_master507/?hl=es-la" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="TOPTECHNOLOGY" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/Toptechnology.png"/></div>
+<div class="brand-card-name">TOPTECHNOLOGY</div>
+<div class="brand-card-tag">Tienda gamer y tecnología</div>
+<div class="brand-card-prov">Panamá</div>
+<div class="brand-card-redes">
+<a href="https://www.instagram.com/toptechnologypty" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Total Center" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/TotalCenter.jpeg"/></div>
+<div class="brand-card-name">Total Center</div>
+<div class="brand-card-tag">Ferretería</div>
+<div class="brand-card-prov">—</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Unica" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/unica.png"/></div>
+<div class="brand-card-name">Unica</div>
+<div class="brand-card-tag">Tecnología y electrónica para tu hogar</div>
+<div class="brand-card-prov">Panamá</div>
+<div class="brand-card-redes">
+<a href="https://unicapanama.com/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+<a href="https://www.instagram.com/unicapanama/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="We Fresh Market" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/Wemarket.png"/></div>
+<div class="brand-card-name">We Fresh Market</div>
+<div class="brand-card-tag">Supermercado</div>
+<div class="brand-card-prov">Panamá</div>
+<div class="brand-card-redes">
+<a href="https://www.wepanama.com/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+</div>
+</div>
+<div class="brand-card oculto">
+<div class="brand-card-logo"><img alt="Ópticas del Istmo" loading="lazy" src="https://storage.googleapis.com/web-cmf/comercios/OPTICASDELISTMO.png"/></div>
+<div class="brand-card-name">Ópticas del Istmo</div>
+<div class="brand-card-tag">Óptica</div>
+<div class="brand-card-prov">Panamá</div>
+<div class="brand-card-redes">
+<a href="https://opticasdelistmo.com/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/web.png"/></a>
+<a href="https://www.instagram.com/opticasdelistmo/" rel="noopener noreferrer" target="_blank"><img alt="enlace" src="https://storage.googleapis.com/web-cmf/comercios/ig.png"/></a>
+</div>
+</div></div>
+<!-- Sin resultados -->
+<div id="brands-no-results" style="display:none;text-align:center;padding:40px 0 24px">
+<svg fill="none" height="40" stroke="rgba(1,30,65,0.2)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" style="margin-bottom:12px" viewbox="0 0 24 24" width="40"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+<p style="font-size:15px;font-weight:700;color:rgba(1,30,65,0.5);margin-bottom:4px">Sin resultados</p>
+<p style="font-size:13px;color:rgba(1,30,65,0.35)">Prueba con otra provincia o categoría</p>
+</div>
+<div style="text-align:center;padding-bottom:48px;margin-top:16px">
+<p class="sub" style="margin-bottom:20px">¿Quieres que tu negocio aparezca aquí?</p>
+<button class="btn-lime" onclick="document.getElementById('modal-comercio').classList.add('open')">Aplicar como aliado →</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- El pie de página se inyecta aquí desde include.js -->
+<div id="site-footer"></div>
+<script src="assets/js/include.js?v=1"></script>
+<script src="assets/js/script.js?v=5"></script>
+</body>
+</html>
