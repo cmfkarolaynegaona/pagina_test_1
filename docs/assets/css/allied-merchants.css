@@ -102,3 +102,25 @@
     height: 24px;
   }
 }
+
+/* Dirección completa dentro de la tarjeta */
+.brand-card-addr {
+  font-size: 11px;
+  line-height: 1.35;
+  color: rgba(1, 30, 65, 0.55);
+  margin-top: 5px;
+}
+@media (max-width: 599px) {
+  .brand-card-addr {
+    font-size: 10px;
+  }
+}
+
+/* Etiquetas del mapa (nuevo mapa real, viewBox 1000 de ancho) */
+#prov-map .prov-lbl { font-size: 11px; }
+#prov-map .prov-shape { stroke-width: 1.2; }
+@media (max-width: 599px) {
+  /* en móvil el mapa se encoge; agrandamos el texto en unidades SVG
+     para que las provincias sigan siendo legibles */
+  #prov-map .prov-lbl { font-size: 17px; }
+}
