@@ -1,21 +1,104 @@
 /* ============================================================
    allied-merchants.css
    Estilos extra para la página de Comercios Aliados (diseño nuevo).
-   Aquí va el logo que se muestra dentro de cada tarjeta de marca.
    ============================================================ */
 
-/* Espacio del logo dentro de cada tarjeta (.brand-card) */
+/* Logo dentro de cada tarjeta */
 .brand-card-logo {
-  height: 52px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 10px;
 }
-
-/* La imagen del logo: se ajusta sin deformarse */
 .brand-card-logo img {
   max-height: 100%;
   max-width: 90%;
   object-fit: contain;
+}
+
+/* Provincia del comercio */
+.brand-card-prov {
+  font-size: 11px;
+  color: rgba(1, 30, 65, 0.55);
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+/* Iconos de redes / web */
+.brand-card-redes {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 10px;
+}
+.brand-card-redes a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  padding: 4px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  transition: transform 0.18s ease, background 0.18s ease;
+}
+.brand-card-redes a:hover {
+  transform: translateY(-2px);
+  background: #e2e8f0;
+}
+.brand-card-redes img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Tarjetas ocultas hasta pulsar "ver más" */
+.brand-card.oculto {
+  display: none;
+}
+
+/* ============================================================
+   GRID FLEXIBLE — se adapta a móvil, tablet y escritorio
+   (sobrescribe el "3 columnas fijas" de styles.css)
+   ============================================================ */
+
+/* Móvil (base): 2 columnas */
+.brands-grid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+/* Tablet: 3 columnas */
+@media (min-width: 600px) {
+  .brands-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Escritorio: 4 columnas */
+@media (min-width: 960px) {
+  .brands-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Ajustes finos en pantallas pequeñas para que no se apriete */
+@media (max-width: 599px) {
+  .brand-card {
+    padding: 16px 10px;
+  }
+  .brand-card-logo {
+    height: 52px;
+  }
+  .brand-card-name {
+    font-size: 14px;
+  }
+  .brand-card-tag {
+    font-size: 12px;
+  }
+  .brand-card-redes a {
+    width: 24px;
+    height: 24px;
+  }
 }
