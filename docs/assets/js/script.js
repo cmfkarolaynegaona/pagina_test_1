@@ -41,56 +41,8 @@ function clearProvMap() {
 
 // ===== COMERCIOS ALIADOS: FILTRO POR PROVINCIA =====
 function filterBrands() {
-  var provEl = document.getElementById('filter-prov');
-  var catEl  = document.getElementById('filter-cat');
-  var prov = provEl ? provEl.value : '';
-  var cat  = catEl ? catEl.value : '';
-  var grid = document.getElementById('brands-grid');
-  if (!grid) return;
-  var cards = grid.querySelectorAll('.brand-card:not(.more)');
-  var moreBtn = document.getElementById('btn-mas-comercios');
-  var count = 0;
-  var activo = !!prov || !!cat;
-
-  if (!activo) {
-    // Sin filtro: volver al estado por defecto (5 destacados + botón)
-    cards.forEach(function(card) {
-      card.style.display = '';
-      if (card.dataset.def === 'hid') {
-        card.classList.add('oculto');
-      } else {
-        card.classList.remove('oculto');
-      }
-    });
-    if (moreBtn) moreBtn.style.display = '';
-  } else {
-    // Con filtro: mostrar los que cumplan provincia Y categoría
-    cards.forEach(function(card) {
-      card.classList.remove('oculto');
-      var provList = (card.dataset.prov || '').split(',').map(function (s) { return s.trim(); });
-      var matchProv = !prov || provList.indexOf(prov) !== -1;
-      var matchCat  = !cat  || (card.dataset.cat || '') === cat;
-      if (matchProv && matchCat) {
-        card.style.display = '';
-        count++;
-      } else {
-        card.style.display = 'none';
-      }
-    });
-    if (moreBtn) moreBtn.style.display = 'none';
-  }
-
-  // Etiqueta de conteo
-  var countEl = document.getElementById('brand-count');
-  if (countEl) {
-    countEl.textContent = !activo ? ''
-      : (count === 0 ? 'Sin resultados para este filtro'
-                     : 'Mostrando ' + count + ' comercio' + (count === 1 ? '' : 's'));
-  }
-
-  // Estado "sin resultados"
-  var noResults = document.getElementById('brands-no-results');
-  if (noResults) noResults.style.display = (activo && count === 0) ? '' : 'none';
+  cmfPage = 1;
+  cmfRender();
 }
 
 /* navigate() ahora está en include.js (redirige entre páginas) */
@@ -530,10 +482,106 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /* Comercios aliados: mostrar todos al pulsar "+ socios más" */
+/* ===== COMERCIOS ALIADOS: directorio paginado ===== */
+var CMF_PAGE_SIZE = 18;      // comercios por página
+var cmfPage = 1;
+var cmfVerMas = false;       // se activa al pulsar "ver más"
+
 function verTodosComercios() {
-  document.querySelectorAll('.brand-card.oculto').forEach(function (c) {
-    c.classList.remove('oculto');
-  });
-  var btn = document.getElementById('btn-mas-comercios');
-  if (btn) btn.style.display = 'none';
+  cmfVerMas = true;
+  cmfPage = 1;
+  cmfRender();
 }
+
+function cmfRender() {
+  var provEl = document.getElementById('filter-prov');
+  var catEl  = document.getElementById('filter-cat');
+  var prov = provEl ? provEl.value : '';
+  var cat  = catEl ? catEl.value : '';
+  var grid = document.getElementById('brands-grid');
+  if (!grid) return;
+  var cards = [].slice.call(grid.querySelectorAll('.brand-card:not(.more)'));
+  var moreBtn   = document.getElementById('btn-mas-comercios');
+  var countEl   = document.getElementById('brand-count');
+  var pagEl     = document.getElementById('brands-pagination');
+  var noResults = document.getElementById('brands-no-results');
+
+  var filtroActivo = !!prov || !!cat;
+  var directorio = cmfVerMas || filtroActivo;
+
+  var matching = cards.filter(function (card) {
+    var provList = (card.dataset.prov || '').split(',').map(function (s) { return s.trim(); });
+    var okProv = !prov || provList.indexOf(prov) !== -1;
+    var okCat  = !cat  || (card.dataset.cat || '') === cat;
+    return okProv && okCat;
+  });
+
+  if (!directorio) {
+    // MODO RESUMEN: 5 destacados + botón, sin paginación
+    cards.forEach(function (card) {
+      card.style.display = '';
+      if (card.dataset.def === 'hid') card.classList.add('oculto');
+      else card.classList.remove('oculto');
+    });
+    if (moreBtn)   moreBtn.style.display = '';
+    if (countEl)   countEl.textContent = '';
+    if (pagEl)     pagEl.innerHTML = '';
+    if (noResults) noResults.style.display = 'none';
+    return;
+  }
+
+  // MODO DIRECTORIO: todos los que coinciden, paginados
+  if (moreBtn) moreBtn.style.display = 'none';
+  cards.forEach(function (c) { c.classList.remove('oculto'); });
+
+  var total = matching.length;
+  var pages = Math.max(1, Math.ceil(total / CMF_PAGE_SIZE));
+  if (cmfPage > pages) cmfPage = pages;
+  if (cmfPage < 1) cmfPage = 1;
+  var start = (cmfPage - 1) * CMF_PAGE_SIZE;
+
+  cards.forEach(function (c) { c.style.display = 'none'; });
+  matching.slice(start, start + CMF_PAGE_SIZE).forEach(function (c) { c.style.display = ''; });
+
+  if (countEl) {
+    countEl.textContent = total === 0 ? 'Sin resultados'
+      : 'Mostrando ' + total + ' comercio' + (total === 1 ? '' : 's');
+  }
+  if (noResults) noResults.style.display = (total === 0) ? '' : 'none';
+  if (pagEl) pagEl.innerHTML = cmfPaginationHTML(cmfPage, pages);
+}
+
+function cmfIrPagina(p) {
+  cmfPage = p;
+  cmfRender();
+  var wrap = document.querySelector('.prov-map-wrap') || document.getElementById('brands-grid');
+  if (wrap) wrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function cmfPaginationHTML(page, pages) {
+  if (pages <= 1) return '';
+  var html = '';
+  html += '<button class="pg-btn pg-nav"' + (page === 1 ? ' disabled' : '') +
+          ' onclick="cmfIrPagina(' + (page - 1) + ')">&lsaquo; Anterior</button>';
+  cmfPageNumbers(page, pages).forEach(function (n) {
+    if (n === '...') html += '<span class="pg-ellipsis">&hellip;</span>';
+    else html += '<button class="pg-btn pg-num' + (n === page ? ' is-active' : '') +
+                 '" onclick="cmfIrPagina(' + n + ')">' + n + '</button>';
+  });
+  html += '<button class="pg-btn pg-nav"' + (page === pages ? ' disabled' : '') +
+          ' onclick="cmfIrPagina(' + (page + 1) + ')">Siguiente &rsaquo;</button>';
+  return html;
+}
+
+function cmfPageNumbers(page, pages) {
+  var out = [];
+  if (pages <= 7) { for (var i = 1; i <= pages; i++) out.push(i); return out; }
+  out.push(1);
+  if (page > 3) out.push('...');
+  var s = Math.max(2, page - 1), e = Math.min(pages - 1, page + 1);
+  for (var j = s; j <= e; j++) out.push(j);
+  if (page < pages - 2) out.push('...');
+  out.push(pages);
+  return out;
+}
+
