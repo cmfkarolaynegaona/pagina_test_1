@@ -125,3 +125,18 @@
   #prov-map .prov-lbl { font-size: 17px; }
 }
 
+/* ===== Paginación del directorio de comercios ===== */
+.brands-pagination{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center;margin:26px 0 8px}
+.brands-pagination:empty{display:none}
+.pg-btn{font:inherit;font-size:14px;font-weight:700;cursor:pointer;border:1px solid rgba(1,30,65,.15);
+  background:#fff;color:var(--navy,#011e41);border-radius:999px;padding:8px 14px;min-width:42px;min-height:42px;transition:all .15s}
+.pg-btn:hover:not(:disabled):not(.is-active){background:rgba(1,30,65,.06)}
+.pg-num.is-active{background:var(--navy,#011e41);color:#fff;border-color:var(--navy,#011e41)}
+.pg-btn:disabled{opacity:.4;cursor:default}
+.pg-ellipsis{color:rgba(1,30,65,.5);padding:0 2px}
+@media (max-width:560px){
+  .pg-btn{font-size:13px;padding:7px 11px;min-width:38px;min-height:38px}
+  .pg-nav{width:100%;order:1}          /* Anterior/Siguiente a lo ancho en móvil */
+}
+
+
