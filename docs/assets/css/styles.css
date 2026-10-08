@@ -226,7 +226,7 @@ button{font-family:inherit;cursor:pointer;border:none;outline:none}
 /* Card image area — top of panel */
 .prod-panel-right{
   display:flex;align-items:center;justify-content:center;
-  padding:44px 32px 28px;min-height:220px;
+  padding:32px 32px 24px;min-height:0;
   position:relative;
 }
 .prod-card-img{
@@ -251,6 +251,7 @@ button{font-family:inherit;cursor:pointer;border:none;outline:none}
 }
 .pcc-digital-tag{
   display:inline-flex;align-items:center;gap:4px;
+  align-self:flex-start;width:fit-content;max-width:max-content;
   background:rgba(255,255,255,0.22);border:1px solid rgba(255,255,255,0.35);
   border-radius:20px;padding:3px 10px;font-size:9px;font-weight:700;
   letter-spacing:0.06em;text-transform:uppercase;
@@ -299,7 +300,7 @@ button{font-family:inherit;cursor:pointer;border:none;outline:none}
   padding:24px 0 4px;
 }
 .prod-img-inline{
-  width:68%;max-width:240px;
+  width:68%;max-width:240px;max-height:300px;object-fit:contain;
   transform:rotate(-5deg) translateY(-4px);
   filter:drop-shadow(0 20px 40px rgba(0,0,0,0.28));
   transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);
@@ -312,12 +313,11 @@ button{font-family:inherit;cursor:pointer;border:none;outline:none}
 @media(min-width:700px){
   .prod-panels-wrap{padding:0 32px}
   .prod-panel.active{
-    flex-direction:row;min-height:360px;
+    flex-direction:row;align-items:stretch;
     max-width:820px;margin:0 auto;
   }
   .prod-panel-left{
-    flex:1;padding:44px 40px 44px 44px;
-    display:flex;flex-direction:column;justify-content:center;
+    flex:1;padding:36px 40px 36px 44px;
   }
   .prod-img-wrap{
     flex:0 0 42%;padding:32px 24px;
@@ -1638,4 +1638,21 @@ button{font-family:inherit;cursor:pointer;border:none;outline:none}
 .com-hub-icon{width:48px;height:48px;background:rgba(147,213,0,0.12);border-radius:14px;display:flex;align-items:center;justify-content:center;color:var(--lima2);margin-bottom:4px}
 .com-hub-title{font-size:17px;font-weight:900;color:var(--navy);line-height:1.2}
 .com-hub-sub{font-size:13px;color:rgba(1,30,65,0.55);line-height:1.5;flex:1}
-.com-hub-arrow{color:var(--lima2);margin-top:8px}to{opacity:1;transform:translateY(0)}}
+.com-hub-arrow{color:var(--lima2);margin-top:8px}
+
+/* ===== Imagen del hero de producto: estática y más grande ===== */
+.pdp-hero-img,
+.pdp-hero-img-wrap .pdp-hero-img{
+  animation:none !important;
+  max-width:440px;
+  width:92%;
+  transform:rotate(-4deg) translateY(-6px);
+}
+.pdp-hero-img:hover{
+  animation:none !important;
+  transform:rotate(-4deg) translateY(-6px);
+}
+@media (max-width:699px){
+  .pdp-hero-img,
+  .pdp-hero-img-wrap .pdp-hero-img{ max-width:340px; }
+}
