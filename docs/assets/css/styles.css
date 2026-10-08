@@ -1671,3 +1671,9 @@ button{font-family:inherit;cursor:pointer;border:none;outline:none}
 #view-cuenta-digital .pdp-hero-img{
   filter:drop-shadow(0 20px 40px rgba(0,0,0,0.28)) !important;
 }
+
+/* ===== Quitar el tinte (hue-rotate) que viene en línea en las imágenes del panel ===== */
+.prod-card-img,
+.prod-img-inline{
+  filter:drop-shadow(0 20px 40px rgba(0,0,0,0.28)) !important;
+}
