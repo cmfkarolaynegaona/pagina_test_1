@@ -232,7 +232,7 @@ button{font-family:inherit;cursor:pointer;border:none;outline:none}
   position:relative;
 }
 .prod-card-img{
-  width:68%;max-width:280px;
+  width:68%;max-width:340px;
   transform:rotate(-6deg) translateY(-6px);
   filter:drop-shadow(0 24px 44px rgba(0,0,0,0.22));
   transition:transform 0.4s cubic-bezier(0.4,0,0.2,1);
