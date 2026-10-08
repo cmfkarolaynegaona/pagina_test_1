@@ -1656,3 +1656,18 @@ button{font-family:inherit;cursor:pointer;border:none;outline:none}
   .pdp-hero-img,
   .pdp-hero-img-wrap .pdp-hero-img{ max-width:340px; }
 }
+
+/* ===== SOLO los heros de producto: imagen RECTA (sin inclinación) ===== */
+/* (El panel "Elige tu tarjeta", comparador y hub conservan su inclinación) */
+.pdp-hero-img,
+.pdp-hero-img-wrap .pdp-hero-img,
+#view-cuenta-digital .pdp-hero-img{
+  transform:none !important;
+}
+.pdp-hero-img:hover{
+  transform:none !important;
+}
+/* Quitar el brillo de color turquesa del hero de Cuenta Digital (sombra neutra) */
+#view-cuenta-digital .pdp-hero-img{
+  filter:drop-shadow(0 20px 40px rgba(0,0,0,0.28)) !important;
+}
