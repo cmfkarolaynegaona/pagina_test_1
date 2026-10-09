@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
-<link href="assets/css/styles.css?v=26" rel="stylesheet"/>
+<link href="assets/css/styles.css?v=31" rel="stylesheet"/>
 </head>
 <body>
 <!-- El menú se inyecta aquí desde include.js -->
@@ -96,6 +96,57 @@
 <div class="pdp-section-label">Otros productos</div>
 <h2 class="pdp-section-title" style="margin-bottom:28px">También puede interesarte</h2>
 <div class="pdp-also-grid"> <button class="pdp-also-card" onclick="navigate('cmf-card')"><div class="pdp-also-stripe" style="background:linear-gradient(90deg,var(--lima),#a8f000)"></div><div class="pdp-also-name">Tarjeta CMF</div><div class="pdp-also-sub">Descuentos en la red CMF</div><div class="pdp-also-link">Ver más <svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="13"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div></button> <button class="pdp-also-card" onclick="navigate('digital-account')"><div class="pdp-also-stripe" style="background:linear-gradient(90deg,var(--turq),var(--aqua))"></div><div class="pdp-also-name">Cuenta Digital</div><div class="pdp-also-sub">Envía y recibe sin costo</div><div class="pdp-also-link">Ver más <svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="13"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div></button> <button class="pdp-also-card" onclick="navigate('youth-account')"><div class="pdp-also-stripe" style="background:linear-gradient(90deg,#6c5ce7,#a29bfe)"></div><div class="pdp-also-name">Cuenta Joven</div><div class="pdp-also-sub">Ahorro y control parental</div><div class="pdp-also-link">Ver más <svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="13"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></div></button></div>
+</div>
+</div>
+<div class="pdp-rates">
+<div class="pdp-rates-inner">
+<div class="pdp-section-label">Transparencia</div>
+<h2 class="pdp-section-title" style="margin-bottom:6px">Tarifas y comisiones</h2>
+<p class="rates-intro">Toca cada sección para ver el detalle de cargos, comisiones y tasas.</p>
+
+<div class="rates-acc">
+<button class="rates-acc-head open" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Cargos y comisiones <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+<div class="rates-acc-body open">
+<table class="rates-table">
+<tr><td>Membresía anual (tarjeta principal)</td><td>Gratis</td></tr>
+<tr><td>Seguro contra fraude</td><td>$1.99 mensual</td></tr>
+<tr><td>Seguro de desgravamen</td><td>0.325% sobre saldo adeudado</td></tr>
+<tr><td>Cargo por pago atrasado</td><td>$25.00 + ITBMS</td></tr>
+<tr><td>Adelanto de efectivo</td><td>5% del monto + 7% ITBMS</td></tr>
+<tr><td>Conversión de moneda extranjera</td><td>Hasta 3% de la transacción</td></tr>
+<tr><td>Investigación de reclamo fallido</td><td>$25.00 + ITBMS</td></tr>
+<tr><td>Programa de Lealtad C+</td><td>Gratis</td></tr>
+<tr><td>FECI</td><td>1% mensual del saldo adeudado</td></tr>
+<tr><td>Pago en comercios aliados</td><td>Gratis</td></tr>
+</table>
+</div>
+</div>
+
+<div class="rates-acc">
+<button class="rates-acc-head" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Tasas de interés <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+<div class="rates-acc-body">
+<table class="rates-table">
+<tr><td>Tasa de interés nominal mensual</td><td>2.33% a 6.66%</td></tr>
+<tr><td>Tasa de interés moratorio mensual</td><td>2%</td></tr>
+</table>
+</div>
+</div>
+
+<div class="rates-acc">
+<button class="rates-acc-head" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">Glosario <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
+<div class="rates-acc-body">
+<ul class="rates-gloss">
+<li><strong>Membresía:</strong> precio que pagas por el uso de tu tarjeta de crédito.</li>
+<li><strong>Cargo por sobregiro:</strong> precio cuando el saldo excede tu límite de crédito.</li>
+<li><strong>Cargo por pago atrasado:</strong> precio cuando no cubres el pago mínimo en la fecha establecida.</li>
+<li><strong>Comisión por retiro de efectivo:</strong> porcentaje que pagas cada vez que retiras efectivo.</li>
+<li><strong>Tasa de interés moratorio:</strong> interés que se genera cuando no pagas a tiempo.</li>
+<li><strong>Tasa de interés para compras:</strong> porcentaje que pagas por usar crédito en compras.</li>
+</ul>
+</div>
+</div>
+
+<p class="rates-note">Sujeto a aprobación crediticia. Tarifas referenciales que pueden variar según el perfil del cliente. Supervisado por la Superintendencia de Bancos de Panamá (SBP).</p>
 </div>
 </div>
 <div class="pdp-tc"><div class="pdp-tc-inner"><div class="pdp-tc-text"><h4>Términos y Condiciones</h4><p>La Mastercard Gold CMF está sujeta a aprobación crediticia. Tasa de interés, cargos y comisiones según contrato vigente. Supervisado por la Superintendencia de Bancos de Panamá.</p></div><button class="pdp-tc-btn" onclick="navigate('terms-and-conditions')">Ver términos completos <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="14"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button></div></div><div class="pdp-cta-band">
