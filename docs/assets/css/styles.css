@@ -1728,3 +1728,10 @@ button{font-family:inherit;cursor:pointer;border:none;outline:none}
 
 /* Al hacer scroll a Productos, que el título no quede bajo el menú fijo */
 #productos{scroll-margin-top:120px}
+
+/* ===== Sección App: arreglos de legibilidad y botón ===== */
+/* Tarjeta lime "Tarjeta digital": texto legible (navy sólido) */
+.ab-card.lime .ab-label-sm{color:var(--navy)}
+.ab-card.lime .ab-sub-sm{color:rgba(1,30,65,0.72)}
+/* Botón grande "Solicita tu tarjeta": compacto y centrado (no barra a todo el ancho) */
+.app-cta-primary{width:auto;max-width:460px;margin-left:auto;margin-right:auto}
