@@ -1722,3 +1722,9 @@ button{font-family:inherit;cursor:pointer;border:none;outline:none}
   .hero-sub{margin-bottom:24px}
   .hero-ctas .btn-primary{width:100%;justify-content:center}  /* en móvil sí a lo ancho */
 }
+
+/* Ocultar el botón de flecha en las tarjetas de beneficios */
+.bc-btn{display:none}
+
+/* Al hacer scroll a Productos, que el título no quede bajo el menú fijo */
+#productos{scroll-margin-top:120px}
