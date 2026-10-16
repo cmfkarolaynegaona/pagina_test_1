@@ -1785,3 +1785,14 @@ button{font-family:inherit;cursor:pointer;border:none;outline:none}
 .fin-title{display:block;font-size:14px;font-weight:800;color:var(--navy);line-height:1.25}
 .fin-sub{display:block;font-size:12px;color:rgba(1,30,65,0.5);margin-top:2px}
 .fin-dl{flex-shrink:0;color:var(--lima2);display:flex;align-items:center}
+
+/* ===== PÁGINAS LEGALES (prosa) ===== */
+.legal{max-width:860px;margin:0 auto}
+.legal h2{font-size:clamp(17px,3vw,22px);font-weight:800;color:var(--navy);margin:34px 0 10px;line-height:1.25}
+.legal h2:first-child{margin-top:0}
+.legal h3{font-size:15px;font-weight:800;color:var(--navy);margin:22px 0 8px}
+.legal p{font-size:14px;color:rgba(1,30,65,0.7);line-height:1.75;margin:0 0 14px}
+.legal ul{margin:0 0 14px;padding-left:22px}
+.legal li{font-size:14px;color:rgba(1,30,65,0.7);line-height:1.7;margin-bottom:7px}
+.legal a{color:var(--lima2);font-weight:600;word-break:break-word}
+.legal strong{color:var(--navy)}
