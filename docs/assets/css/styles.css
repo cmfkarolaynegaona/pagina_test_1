@@ -1765,3 +1765,9 @@ button{font-family:inherit;cursor:pointer;border:none;outline:none}
 .seg-contact svg{flex-shrink:0;color:var(--lima2)}
 .seg-note{font-size:12px;color:rgba(1,30,65,0.52);line-height:1.6;margin-top:10px}
 .seg-cta-band{text-align:center;padding:8px 0 0}
+
+/* ===== Seguros (escritorio): precio y contacto más compactos ===== */
+@media (min-width:700px){
+  .seg-price{display:inline-flex;width:auto;gap:28px;padding:14px 26px}
+  .seg-contact{display:inline-flex;width:auto}
+}
