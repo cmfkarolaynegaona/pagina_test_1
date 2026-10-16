@@ -1735,3 +1735,33 @@ button{font-family:inherit;cursor:pointer;border:none;outline:none}
 .ab-card.lime .ab-sub-sm{color:rgba(1,30,65,0.72)}
 /* Botón grande "Solicita tu tarjeta": compacto y centrado (no barra a todo el ancho) */
 .app-cta-primary{width:auto;max-width:460px;margin-left:auto;margin-right:auto}
+
+/* ===== SEGUROS ===== */
+.seg-selector{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.seg-tab{flex-shrink:0;padding:10px 20px;border-radius:100px;border:1.5px solid rgba(1,30,65,0.15);background:#fff;color:rgba(1,30,65,0.6);font-family:inherit;font-size:13px;font-weight:700;cursor:pointer;transition:all .18s}
+.seg-tab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.seg-tab:hover:not(.active){background:rgba(1,30,65,0.05)}
+.seg-panel{display:none}
+.seg-panel.active{display:block}
+.seg-card{background:#fff;border:1px solid rgba(1,30,65,0.08);border-radius:18px;padding:24px;box-shadow:0 4px 20px rgba(1,30,65,0.06);margin-bottom:26px}
+.seg-card-head{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+.seg-card-ic{width:48px;height:48px;border-radius:14px;background:rgba(147,213,0,0.12);display:flex;align-items:center;justify-content:center;color:var(--lima2);flex-shrink:0}
+.seg-card-title{font-size:clamp(17px,2.4vw,20px);font-weight:800;color:var(--navy);line-height:1.2}
+.seg-card-desc{font-size:14px;color:rgba(1,30,65,0.6);line-height:1.6;margin:0 0 6px}
+.seg-price{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--navy);color:#fff;border-radius:14px;padding:16px 20px;margin-top:16px;flex-wrap:wrap}
+.seg-price span{font-size:14px;font-weight:600;color:rgba(255,255,255,0.82)}
+.seg-price strong{font-size:26px;font-weight:900;color:var(--lima);line-height:1}
+.seg-def{margin-bottom:12px}
+.seg-def h4{font-size:15px;font-weight:800;color:var(--navy);margin:0 0 5px}
+.seg-def p{font-size:14px;color:rgba(1,30,65,0.65);line-height:1.6;margin:0 0 10px}
+.seg-list{list-style:none;padding:0;margin:6px 0 0;display:flex;flex-direction:column;gap:9px}
+.seg-list li{display:flex;align-items:flex-start;gap:9px;font-size:14px;color:rgba(1,30,65,0.72);line-height:1.5}
+.seg-list li svg{flex-shrink:0;margin-top:3px}
+.seg-ages{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.seg-age{flex:1;min-width:150px;background:rgba(1,30,65,0.04);border:1px solid rgba(1,30,65,0.08);border-radius:12px;padding:14px 16px}
+.seg-age-lbl{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;color:rgba(1,30,65,0.45);margin-bottom:4px}
+.seg-age-val{font-size:16px;font-weight:800;color:var(--navy)}
+.seg-contact{display:flex;align-items:center;gap:12px;background:rgba(147,213,0,0.1);border:1px solid rgba(147,213,0,0.25);border-radius:14px;padding:14px 18px;margin:6px 0 14px;text-decoration:none;color:var(--navy);font-weight:800;font-size:15px}
+.seg-contact svg{flex-shrink:0;color:var(--lima2)}
+.seg-note{font-size:12px;color:rgba(1,30,65,0.52);line-height:1.6;margin-top:10px}
+.seg-cta-band{text-align:center;padding:8px 0 0}
