@@ -796,7 +796,7 @@ button{font-family:inherit;cursor:pointer;border:none;outline:none}
 }
 
 /* ─── T&C SECTION ─── */
-.pdp-tc{padding:40px 24px;background:var(--light);border-top:1px solid rgba(1,30,65,0.07)}
+.pdp-tc{padding:22px 24px;background:var(--light);border-top:1px solid rgba(1,30,65,0.07)}
 .pdp-tc-inner{max-width:920px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
 @media(min-width:600px){.pdp-tc-inner{flex-direction:row;align-items:center;justify-content:space-between}}
 .pdp-tc-text h4{font-size:14px;font-weight:800;color:var(--navy);margin:0 0 6px;letter-spacing:-0.2px}
