@@ -79,7 +79,7 @@
 /* Escritorio: 4 columnas */
 @media (min-width: 960px) {
   .brands-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -138,5 +138,20 @@
   .pg-btn{font-size:13px;padding:7px 11px;min-width:38px;min-height:38px}
   .pg-nav{width:100%;order:1}          /* Anterior/Siguiente a lo ancho en móvil */
 }
+
+
+
+
+/* ===== Provincia: dropdown fácil en móvil (oculta el mapa chiquito) ===== */
+#filter-prov{width:100%;padding:12px 14px;border-radius:12px;border:1.5px solid rgba(1,30,65,0.14);
+  background:#fff;font-family:inherit;font-size:14px;font-weight:600;color:var(--navy);margin-top:4px;
+  -webkit-appearance:none;appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23011e41' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 12px center;background-size:14px}
+@media (max-width:600px){
+  .prov-map-svg{display:none}
+  #filter-prov{display:block !important}
+}
+
 
 
