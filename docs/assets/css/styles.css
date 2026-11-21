@@ -307,12 +307,21 @@
 .sub,.section-sub,.tool-card-desc,.com-hub-sub,.article-excerpt,.pdp-also-sub,
 .pdp-card-body p,.faq-a{color:rgba(1,30,65,0.72)}
 
+
 /* ===== Franja de marcas con logos (imágenes) ===== */
 .brand-strip__logo{display:inline-flex;align-items:center;flex-shrink:0;height:40px}
 .brand-strip__logo img{height:20px;width:auto;display:block;object-fit:contain;transition:opacity .15s,transform .15s}
 .brand-strip__logo:hover img{opacity:.75}
 .brand-strip__logo--active img{height:22px}
 @media(max-width:560px){.brand-strip__logo img{height:18px}}
+
+/* Kohler y Punto Cochez un poco más altos para que se lean (va DESPUÉS del media query) */
+.brand-strip__logo--kohler img,
+.brand-strip__logo--puntocochez img{height:26px}
+@media(max-width:560px){
+  .brand-strip__logo--kohler img,
+  .brand-strip__logo--puntocochez img{height:24px}
+}
 
 /* ===== Avatares "en línea": latido suave (sensación de gente activa) ===== */
 .app-trust-av{animation:trustPulse 2.4s ease-in-out infinite}
