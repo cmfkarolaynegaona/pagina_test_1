@@ -317,7 +317,7 @@
 
 /* Kohler y Punto Cochez un poco más altos para que se lean (va DESPUÉS del media query) */
 .brand-strip__logo--kohler img,
-.brand-strip__logo--puntocochez img{height:26px}
+.brand-strip__logo--puntocochez img{height:28px}
 @media(max-width:560px){
   .brand-strip__logo--kohler img,
   .brand-strip__logo--puntocochez img{height:24px}
